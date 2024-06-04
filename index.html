@@ -1,52 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Contact form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <article>
+      <form class="contact-form">
+        <h2 class="contact-form__title">Contact Us</h2>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+        <label class="input-label" for="firstName">First Name</label>
+        <input class="text-input" type="text" name="firstName" id="firstName" />
+        <p class="error-message">This field is required</p>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <label class="input-label" for="lastName">Last Name</label>
+        <input class="text-input" type="text" name="lastName" id="lastName" />
+        <p class="error-message">This field is required</p>
 
-  Contact Us
+        <label class="input-label" for="email">Email Address</label>
+        <input type="email" name="email" id="email" />
+        <p class="error-message">Please enter a valid email address</p>
+        <p class="error-message">This field is required</p>
 
-  First Name
-  This field is required
+        <fieldset class="query-type-group">
+          <legend class="query-type-legend">Query Type</legend>
+          <input type="radio" name="generalEnq" id="generalEnq" />
+          <label for="generalEnq">General Enquiry</label>
+          <input type="radio" name="supportReq" id="supportReq" />
+          <label for="supportReq">Support Request</label>
+        </fieldset>
+        <p class="error-message">Please select a query type</p>
 
-  Last Name
-  This field is required
+        <label class="input-label" for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+        <p class="error-message">This field is required</p>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+        <input type="checkbox" name="consent" id="consent" />
+        <label class="input-label" for="consent">I consent to being contacted by the team</label>
+        <p class="error-message">To submit this form, please consent to being contacted</p>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </article>
 
-  Message
-  This field is required
+    <aside class="success-card">
+      <h3 class="success-card__title">Message Sent!</h3>
+      <p class="success-card__message">Thanks for completing the form. We'll be in touch soon!</p>
+    </aside>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Carlos Chaves</a>.
+    </footer>
+  </body>
 </html>
