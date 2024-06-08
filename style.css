@@ -1,4 +1,81 @@
 @font-face {
-  font-family: ;
-  src: url();
+  font-family: "Karla";
+  src: url("assets/fonts/static/Karla-Regular.woff2") format("woff2"),
+    url("assets/fonts/static/Karla-Regular.woff") format("woff"),
+    url("assets/fonts/static/Karla-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("assets/fonts/static/Karla-Bold.woff2") format("woff2"),
+    url("assets/fonts/static/Karla-Bold.woff") format("woff"),
+    url("assets/fonts/static/Karla-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+:root {
+  /* font family */
+  --font-family-body: "Karla";
+
+  /* font weight */
+  --font-weight-regular: 400;
+  --font-weight-strong: 700;
+
+  /* font size */
+  --font-size-body: 1rem;
+
+  /* colors */
+  --color-primary-200: hsl(148, 38%, 91%);
+  --color-primary-600: hsl(169, 82%, 27%);
+  --color-primary-1: hsl(0, 66%, 54%);
+  --color-neutral-1: hsl(0, 0%, 100%);
+  --color-neutral-500: hsl(186, 15%, 59%);
+  --color-neutral-900: hsl(187, 24%, 22%);
+}
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* General styles */
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-primary-200);
+  font-family: var(--font-family-body);
+  padding-block: 1.3rem;
+  padding-inline: 1rem;
+}
+
+.contact-form {
+  background-color: var(--color-neutral-1);
+  border-radius: 1rem;
+  padding-block: 1.4rem;
+  padding-inline: 1.4rem;
+}
+
+.contact-form__title {
+  font-size: 2rem;
+  font-weight: var(--font-weight-strong);
+  color: var(--color-neutral-900);
 }
