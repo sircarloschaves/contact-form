@@ -57,6 +57,18 @@ svg {
   display: block;
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* General styles */
 
 body {
@@ -79,3 +91,70 @@ body {
   font-weight: var(--font-weight-strong);
   color: var(--color-neutral-900);
 }
+
+.input-label {
+  font-size: var(--font-size-body);
+  color: var(--color-neutral-900);
+}
+
+.text-input,
+.email-input {
+  padding-block: .8rem;
+  border: 1px solid var(--color-neutral-500);
+  border-radius: .5rem;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: var(--color-primary-1);
+}
+
+.firstName-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-block-start: 1.5rem;
+}
+
+.lastName-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-block-start: 1rem;
+}
+
+.email-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-block-start: 1rem;
+}
+
+.query-type-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 1rem;
+}
+
+.userMessage-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 1rem;
+}
+
+.checkbox-wrapper {
+  margin-block-start: 1.5rem;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-1);
+  font-weight: var(--font-weight-strong);
+  padding-block: 1rem;
+  margin-block-start: 1.5rem;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+

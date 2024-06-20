@@ -10,7 +10,7 @@
       href="./assets/images/favicon-32x32.png"
     />
     <title>Contact form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -18,35 +18,65 @@
       <form class="contact-form">
         <h2 class="contact-form__title">Contact Us</h2>
 
-        <label class="input-label" for="firstName">First Name</label>
-        <input class="text-input" type="text" name="firstName" id="firstName" />
-        <p class="error-message">This field is required</p>
+        <div class="name-wrapper">
+          <div class="firstName-wrapper">
+            <label class="input-label" for="firstName">First Name</label>
+            <input
+              class="text-input"
+              type="text"
+              name="firstName"
+              id="firstName"
+            />
+            <p class="error-message">This field is required</p>
+          </div>
 
-        <label class="input-label" for="lastName">Last Name</label>
-        <input class="text-input" type="text" name="lastName" id="lastName" />
-        <p class="error-message">This field is required</p>
+          <div class="lastName-wrapper">
+            <label class="input-label" for="lastName">Last Name</label>
+            <input
+              class="text-input"
+              type="text"
+              name="lastName"
+              id="lastName"
+            />
+            <p class="error-message">This field is required</p>
+          </div>
+        </div>
 
-        <label class="input-label" for="email">Email Address</label>
-        <input type="email" name="email" id="email" />
-        <p class="error-message">Please enter a valid email address</p>
-        <p class="error-message">This field is required</p>
+        <div class="email-wrapper">
+          <label class="input-label" for="email">Email Address</label>
+          <input class="email-input" type="email" name="email" id="email" />
+          <p class="error-message">Please enter a valid email address</p>
+          <p class="error-message">This field is required</p>
+        </div>
 
-        <fieldset class="query-type-group">
-          <legend class="query-type-legend">Query Type</legend>
-          <input type="radio" name="generalEnq" id="generalEnq" />
-          <label for="generalEnq">General Enquiry</label>
-          <input type="radio" name="supportReq" id="supportReq" />
-          <label for="supportReq">Support Request</label>
+        <fieldset class="query-type-wrapper">
+          <legend class="query-type-legend input-label">Query Type</legend>
+          <div class="radio-wrapper">
+            <input type="radio" name="generalEnq" id="generalEnq" />
+            <label for="generalEnq">General Enquiry</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" name="supportReq" id="supportReq" />
+            <label for="supportReq">Support Request</label>
+          </div>
         </fieldset>
         <p class="error-message">Please select a query type</p>
 
-        <label class="input-label" for="message">Message</label>
-        <textarea name="message" id="message"></textarea>
-        <p class="error-message">This field is required</p>
+        <div class="userMessage-wrapper">
+          <label class="input-label" for="userMessage">Message</label>
+          <textarea name="userMessage" id="userMessage" rows="10"></textarea>
+          <p class="error-message">This field is required</p>
+        </div>
 
-        <input type="checkbox" name="consent" id="consent" />
-        <label class="input-label" for="consent">I consent to being contacted by the team</label>
-        <p class="error-message">To submit this form, please consent to being contacted</p>
+        <div class="checkbox-wrapper">
+          <input type="checkbox" name="consent" id="consent" />
+          <label class="input-label" for="consent"
+            >I consent to being contacted by the team</label
+          >
+          <p class="error-message">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
 
         <button class="submit-btn" type="submit">Submit</button>
       </form>
@@ -54,7 +84,9 @@
 
     <aside class="success-card">
       <h3 class="success-card__title">Message Sent!</h3>
-      <p class="success-card__message">Thanks for completing the form. We'll be in touch soon!</p>
+      <p class="success-card__message">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
     </aside>
 
     <footer class="attribution">
