@@ -95,18 +95,41 @@ body {
 .input-label {
   font-size: var(--font-size-body);
   color: var(--color-neutral-900);
+  font-weight: var(font);
+}
+
+.input-label::after {
+  content: '*';
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-strong);
+  margin-inline-start: .3rem;
 }
 
 .text-input,
 .email-input {
+  padding-inline: 1rem;
   padding-block: .8rem;
-  border: 1px solid var(--color-neutral-500);
+  border: 2px solid var(--color-neutral-500);
   border-radius: .5rem;
+  color: var(--color-neutral-900);
+}
+
+.text-input:focus,
+.email-input:focus {
+  outline: transparent;
+}
+
+.text-input:hover,
+.text-input:focus-visible,
+.email-input:hover,
+.email-input:focus-visible {
+  border: 2px solid var(--color-primary-600);
 }
 
 .error-message {
   font-size: 1rem;
   color: var(--color-primary-1);
+  display: none;
 }
 
 .firstName-wrapper {
@@ -131,15 +154,61 @@ body {
 }
 
 .query-type-wrapper {
-  display: flex;
-  flex-direction: column;
   margin-block-start: 1rem;
 }
+
+.query-type-wrapper label {
+  font-size: 1.1rem;
+  color: var(--color-neutral-900);
+  padding-inline-start: 1.6rem;
+  padding-inline-end: 1rem;
+  padding-block: .8rem;
+  border: 2px solid var(--color-neutral-500);
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  cursor: pointer;
+}
+
+.query-type-wrapper label:hover,
+.query-type-wrapper label:focus-visible {
+  background-color: var(--color-primary-200);
+  border: 2px solid var(--color-primary-600)
+}
+
+.radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin-block-start: 1rem;
+}
+
+
 
 .userMessage-wrapper {
   display: flex;
   flex-direction: column;
+  gap: .5rem;
   margin-block-start: 1rem;
+}
+
+.userMessage {
+  resize: none;
+  padding-inline: 1rem;
+  padding-block: .8rem;
+  border: 2px solid var(--color-neutral-500);
+  border-radius: .5rem;
+  color: var(--color-neutral-900);
+}
+
+.userMessage:focus {
+  outline: transparent;
+}
+
+.userMessage:hover,
+.userMessage:focus-visible {
+  border: 2px solid var(--color-primary-600);
 }
 
 .checkbox-wrapper {
@@ -156,5 +225,10 @@ body {
   border: none;
   border-radius: .5rem;
   cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:focus-visible {
+  background-color: var(--color-neutral-900);
 }
 

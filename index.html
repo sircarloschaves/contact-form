@@ -44,35 +44,35 @@
 
         <div class="email-wrapper">
           <label class="input-label" for="email">Email Address</label>
-          <input class="email-input" type="email" name="email" id="email" />
+          <input class="email-input" type="text" name="email" id="email" />
           <p class="error-message">Please enter a valid email address</p>
           <p class="error-message">This field is required</p>
         </div>
 
         <fieldset class="query-type-wrapper">
           <legend class="query-type-legend input-label">Query Type</legend>
+
           <div class="radio-wrapper">
-            <input type="radio" name="generalEnq" id="generalEnq" />
-            <label for="generalEnq">General Enquiry</label>
-          </div>
-          <div class="radio-wrapper">
-            <input type="radio" name="supportReq" id="supportReq" />
-            <label for="supportReq">Support Request</label>
+            <label for="genEnq">
+              <input type="radio" name="queryType" id="genEnq" value="generalEnquiry"> General Enquiry
+            </label>
+            
+            <label for="suppReq">
+              <input type="radio" name="queryType" id="suppReq"> Support Request
+            </label>
           </div>
         </fieldset>
         <p class="error-message">Please select a query type</p>
 
         <div class="userMessage-wrapper">
           <label class="input-label" for="userMessage">Message</label>
-          <textarea name="userMessage" id="userMessage" rows="10"></textarea>
+          <textarea name="userMessage" id="userMessage" rows="10" class="userMessage"></textarea>
           <p class="error-message">This field is required</p>
         </div>
 
         <div class="checkbox-wrapper">
           <input type="checkbox" name="consent" id="consent" />
-          <label class="input-label" for="consent"
-            >I consent to being contacted by the team</label
-          >
+          <label class="input-label" for="consent">I consent to being contacted by the team</label>
           <p class="error-message">
             To submit this form, please consent to being contacted
           </p>
